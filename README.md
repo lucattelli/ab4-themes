@@ -1,6 +1,6 @@
 # ABAP 4 Editor Themes Collection
 
-If you're using SAPgui's *already-not-so-*new ABAP editor, you can have your own theme. Here's mine:
+If you're using SAPgui's ABAP editor, you can have your own theme. Here's mine:
 
 ![terminus](img/terminus.png)
 
@@ -12,9 +12,41 @@ Programmers are adopting simple code editors with dark themes and custom color s
 
 Alexey Arseniev, suggested that we created a central repo in which people can find themes and also contribute with their own versions of them.
 
+# Installation Instructions
+
+First, **you must be using the already-not-so-new ABAP editor**. To enable it, go to SE38 -> Utilities -> Settings -> Editor tab -> **Front-end Editor (new)**. Click OK and then **close SAPgui**.
+
+Then, go to this folder in your machine to find the theme files:
+
+<pre>%APPDATA%\SAP\SAP GUI\ABAP Editor\</pre>
+
+It's recommended at this point that you create a backup of your original files.
+
+Finally, overwrite the original theme files with the one of your choice. Start SAPgui again and your ABAP editor will now use the new theme.
+
+One last tip for you is that you can change your font as well. To do so, you must click on the small button placed at the right corner to access the editor's options. Once there, you can change the font here:
+
+[![detail_font](img/detail_font.png)](img/detail_font.png)
+
+For more fonts, you can check the [Hack](http://sourcefoundry.org/hack/) and [Terminus](http://terminus-font.sourceforge.net) fonts. Also, [this repo] (https://github.com/chrissimpkins/codeface) contains a collection of fonts for code editors.
+
+Now you can click **Save** and start coding! :)
+
+# Themes
+
+Here's a list of themes currently available.
+
+* [Bruno's ABAP Dark Theme](themes/brl-dark-editor/theme-info.md)
+* *Insert your own theme link here...*
+
 # Contribute with your own theme
 
-The themes are organized under the [themes](themes/) folder. If you want to contribute, please add your own theme folder under this one. Remember also to include a theme-info.md with your theme information and a nice screenshot so that other people can see it before downloading it.
+Create a folder for your own theme inside the [themes](themes/) folder.
+
+It may contain:
+1. *_spec.xml* files for different programming languages, but no *_user.xml* files. These ones are not needed for the theme.
+2. Image with example of how scheme look like.
+3. Description with image above and list of all “languages” that are supported (ABAP + BSP + XML etc).
 
 # Thanks
 
