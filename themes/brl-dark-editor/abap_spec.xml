@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
 <XMLConfigSettings>
 	<FILEINFO>
-		<Author>Alex Arseniev</Author>
+		<Author>Bruno Lucattelli</Author>
 		<Type>LangSpec</Type>
 		<Language>ABAP</Language>
 		<Desc>Language specification for ABAP</Desc>
