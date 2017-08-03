@@ -28,7 +28,7 @@ One last tip for you is that you can change your font as well. To do so, you mus
 
 [![detail_font](img/detail_font.png)](img/detail_font.png)
 
-For more fonts, you can check the [Hack](http://sourcefoundry.org/hack/) and [Terminus](http://terminus-font.sourceforge.net)Â fonts. Also, [this repo] (https://github.com/chrissimpkins/codeface) contains a collection of fonts for code editors.
+For more fonts, you can check the [Hack](http://sourcefoundry.org/hack/) and [Terminus](http://terminus-font.sourceforge.net) fonts. Also, [this repo] (https://github.com/chrissimpkins/codeface) contains a collection of fonts for code editors.
 
 Now you can click **Save** and start coding! :)
 
