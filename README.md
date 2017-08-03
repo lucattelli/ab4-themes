@@ -28,7 +28,7 @@ One last tip for you is that you can change your font as well. To do so, you mus
 
 [![detail_font](img/detail_font.png)](img/detail_font.png)
 
-For more fonts, you can check the [Hack](http://sourcefoundry.org/hack/)Â andÂ [Terminus](http://terminus-font.sourceforge.net)Â fonts. Also, [this repo] (https://github.com/chrissimpkins/codeface) contains a collection of fonts for code editors.
+For more fonts, you can check the [Hack](http://sourcefoundry.org/hack/) and [Terminus](http://terminus-font.sourceforge.net)Â fonts. Also, [this repo] (https://github.com/chrissimpkins/codeface) contains a collection of fonts for code editors.
 
 Now you can click **Save** and start coding! :)
 
@@ -47,7 +47,7 @@ Create a folder for your own theme inside the [themes](themes/) folder.
 It may contain:
 1. *_spec.xml* files for different programming languages, but no *_user.xml* files. These ones are not needed for the theme.
 2. Image with an example of how scheme looks like.
-3. Description with the image above and a list of all "languages" that are supported (ABAP + BSP + XML etc).
+3. Description with the image above and a list of all "languages" that are supported (ABAP + BSP + XML etc).
 
 # Thanks
 
