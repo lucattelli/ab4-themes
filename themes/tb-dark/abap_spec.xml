@@ -1,0 +1,617 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lang_spec.xslt"?>
+<XMLConfigSettings>
+	<FILEINFO>
+		<Author>Alex Arseniev</Author>
+		<Type>LangSpec</Type>
+		<Language>ABAP</Language>
+		<Desc>Language specification for ABAP</Desc>
+	</FILEINFO>
+	<SPECIFICATION>
+		<FilePattern>*.abap</FilePattern>
+		<LexerDll>sapab4lex.dll</LexerDll>
+		<CaseSensitive>0</CaseSensitive>
+		<OpenClose>()[]''``||{}</OpenClose>
+		<Delimiters>,.:</Delimiters>
+		<WrapBy>(),</WrapBy>
+		<LineEnd>.</LineEnd>
+		<Words>0-9a-Z_/&lt;&gt;</Words>
+		<HierarchySeparator>
+			<Separator id="1" text="-"/>
+			<Separator id="2" text="-&gt;"/>
+			<Separator id="3" text="=&gt;"/>
+			<Separator id="4" text="~"/>
+			<Separator id="5" text="\"/>
+			<Separator id="6" text="^"/>
+			<Separator id="7" text="@"/>
+		</HierarchySeparator>
+	</SPECIFICATION>
+	<STRUCTURES>
+		<exception-follows value="="/>
+		<Structure open="region" close="endregion" header="0" has_name="1" sent_start="1"/>
+		<Structure open="if" middle="else" close="endif" header="1" sent_start="1">
+			<Middle name="elseif"/>
+		</Structure>
+		<Structure open="case" middle="when" close="endcase" header="1" sent_start="1">
+			<Middle name="others"/>
+		</Structure>
+		<Structure open="loop" close="endloop" header="1" sent_start="1"/>
+		<Structure open="form" close="endform" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="while" close="endwhile" header="1" sent_start="1"/>
+		<Structure open="do" close="enddo" header="1" sent_start="1"/>
+		<Structure open="try" middle="catch" close="endtry" header="1" sent_start="1">
+			<Middle name="cleanup"/>
+		</Structure>
+		<Structure open="class" close="endclass" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="method" close="endmethod" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="function" close="endfunction" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="module" close="endmodule" has_name="1" separator="1" header="1" sent_start="1"/>
+		<Structure open="interface" close="endinterface" header="1" sent_start="1"/>
+		<Structure open="at" close="endat" header="1" sent_start="1"/>
+		<Structure open="exec" close="endexec" header="1" sent_start="0"/>
+		<Structure open="define" close="end-of-definition" has_name="1" separator="1" header="0" sent_start="1"/>
+		<Structure open="provide" close="endprovide" header="1" sent_start="1"/>
+		<Structure open="select" close="endselect" header="1" sent_start="1">
+			<open-exception-follows value="single"/>
+			<open-exception-contains value="into table"/>
+		</Structure>
+		<Structure open="begin" close="end" header="0"/>
+		<Structure open="enhancement" close="endenhancement" header="0" has_name="1" separator="1" sent_start="1"/>
+		<Structure open="enhancement-section" close="end-enhancement-section" header="0" has_name="1" separator="1" sent_start="1"/>
+		<Structure open="seam" close="endseam" header="1" sent_start="1"/>
+		<Structure open="inject" close="endinject" header="1" sent_start="1"/>
+		<Structure open="for" close="endfor" header="1" sent_start="1"/>
+	</STRUCTURES>
+	<FORMAT>
+		<DefaultIndent>2</DefaultIndent>
+		<ResetFormatSymbols>,</ResetFormatSymbols>
+		<FormatWords>
+			<FormatWord word="data" indent="6" next_line="1"/>
+			<FormatWord word="field-symbols" indent="15" next_line="1"/>
+			<FormatWord word="importing" indent="2" next_line="1"/>
+			<FormatWord word="exporting" indent="2" next_line="1"/>
+			<FormatWord word="changing" indent="2" next_line="1"/>
+			<FormatWord word="exceptions" indent="2" next_line="1"/>
+			<FormatWord word="tables" indent="2" next_line="1"/>
+			<FormatWord word="using" indent="6" next_line="1"/>
+			<FormatWord word="elseif" indent="-2"/>
+			<FormatWord word="binding" indent="2" next_line="1"/>
+		</FormatWords>
+	</FORMAT>
+	<SYNTAXINFO>
+		<InfoType id="1" name="Compiler error" clr="-1"/>
+		<InfoType id="2" name="Performance tip" clr="-1"/>
+		<InfoType id="3" name="Syntax tip" clr="-1"/>
+		<InfoType id="4" name="Spelling error" clr="-1"/>
+	</SYNTAXINFO>
+	<FILTERICONCAPTION>
+		<IconIndex id="0" name="Bold"/>
+		<IconIndex id="1" name="Public"/>
+		<IconIndex id="2" name="Protected"/>
+		<IconIndex id="3" name="Private"/>
+		<IconIndex id="4" name="Class"/>
+		<IconIndex id="5" name="Variable"/>
+		<IconIndex id="6" name="Constant"/>
+		<IconIndex id="7" name="Structure"/>
+		<IconIndex id="8" name="Function"/>
+		<IconIndex id="9" name="Type"/>
+		<IconIndex id="10" name="Method"/>
+		<IconIndex id="11" name="Keyword"/>
+		<IconIndex id="12" name="Regular"/>
+		<IconIndex id="13" name="Screen"/>
+		<IconIndex id="14" name="Include"/>
+		<IconIndex id="15" name="Application"/>
+		<IconIndex id="16" name="Table"/>
+		<IconIndex id="17" name="Attribute"/>
+		<IconIndex id="18" name="Relation"/>
+		<IconIndex id="19" name="Event"/>
+	</FILTERICONCAPTION>
+	<COLORSYNTAX>
+		<TextType id="8" name="Breakpoint" dstyle="1" dbkclr="0" clr="16777215" bkclr="139"/>
+		<TextType id="10" name="Changed indicator" dstyle="1" dbkclr="1" clr="2124031"/>
+		<TextType id="11" name="Changed and saved indicator" dstyle="1" dbkclr="1" clr="12895487"/>
+		<TextType id="5" name="Current line" dstyle="1" dbkclr="0" clr="-1" bkclr="3947580"/>
+		<TextType id="6" name="Erroneous line" dstyle="1" dbkclr="0" clr="65535" bkclr="255"/>
+		<TextType id="7" name="Execution" dstyle="1" dbkclr="0" clr="16777215" bkclr="3329330"/>
+		<TextType id="3" name="Inactive selected text" dstyle="1" dbkclr="0" clr="-1" bkclr="-1"/>
+		<TextType id="4" name="Line number" dstyle="1" dbkclr="1" clr="7105644"/>
+		<TextType id="13" name="Maximum line length" dstyle="1" dbkclr="1" clr="255"/>
+		<TextType id="2" name="Selected text" dstyle="1" dbkclr="0" clr="16777215" bkclr="4227327"/>
+		<TextType id="1" name="Selection margin" dstyle="1" dbkclr="1" clr="14281970"/>
+		<TextType id="21" name="Text highlights" bold="1" italic="0" underline="1" clr="15724527" bkclr="-1"/>
+		<TextType id="22" name="Text highlights error" bold="1" italic="0" underline="0" clr="255" bkclr="-1"/>
+		<TextType id="30" name="Normal" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="12632256" bkclr="2434341"/>
+		<TextType id="9" name="Read-only mode" dstyle="1" dbkclr="1" clr="0"/>
+		<TextType id="31" name="Comments" dstyle="0" dbkclr="0" text="1" bold="0" italic="1" underline="0" clr="8421504" bkclr="-1">
+			<FirstChar>*</FirstChar>
+			<Conditions>
+				<Condition start="&quot;" end="\n"/>
+			</Conditions>
+		</TextType>
+		<TextType id="52" name="Keywords" ImageIdx="13" bold="0" italic="0" underline="0" clr="16761992" bkclr="-1">
+			<Keywords>
+				<Keyword text="Class-pool"/>
+				<Keyword text="Function-pool"/>
+				<Keyword text="Include"/>
+				<Keyword text="Interface-pool"/>
+				<Keyword text="Program"/>
+				<Keyword text="Report"/>
+				<Keyword text="Type-pool"/>
+				<Keyword text="bound"/>
+				<Keyword text="Class"/>
+				<Keyword text="Class-data"/>
+				<Keyword text="Class-events"/>
+				<Keyword text="Class-methods"/>
+				<Keyword text="Constants"/>
+				<Keyword text="Contexts"/>
+				<Keyword text="Data"/>
+				<Keyword text="Definition"/>
+				<Keyword text="Endclass"/>
+				<Keyword text="Endinterface"/>
+				<Keyword text="Enhancement"/>
+				<Keyword text="Endenhancement"/>
+				<Keyword text="Enhancement-section"/>
+				<Keyword text="End-enhancement-section"/>
+				<Keyword text="Events"/>
+				<Keyword text="Field-groups"/>
+				<Keyword text="Field-symbols"/>
+				<Keyword text="Implementation"/>
+				<Keyword text="Interface"/>
+				<Keyword text="Interfaces"/>
+				<Keyword text="Local"/>
+				<Keyword text="Methods"/>
+				<Keyword text="Parameters"/>
+				<Keyword text="Private"/>
+				<Keyword text="Protected"/>
+				<Keyword text="Public"/>
+				<Keyword text="Ranges"/>
+				<Keyword text="Section"/>
+				<Keyword text="Selection-screen"/>
+				<Keyword text="Select-options"/>
+				<Keyword text="Static"/>
+				<Keyword text="Statics"/>
+				<Keyword text="spots"/>
+				<Keyword text="Type-pools"/>
+				<Keyword text="Types"/>
+				<Keyword text="During "/>
+				<Keyword text="End-of-page"/>
+				<Keyword text="End-of-selection"/>
+				<Keyword text="Initialization"/>
+				<Keyword text="Line-selection"/>
+				<Keyword text="Line-selection"/>
+				<Keyword text="Load-of-program"/>
+				<Keyword text="Selection-screen"/>
+				<Keyword text="Start-of-selection"/>
+				<Keyword text="Top-of-page"/>
+				<Keyword text="User-command"/>
+				<Keyword text="and"/>
+				<Keyword text="assigned"/>
+				<Keyword text="At"/>
+				<Keyword text="Begin"/>
+				<Keyword text="between"/>
+				<Keyword text="binding"/>
+				<Keyword text="block"/>
+				<Keyword text="byte-ca"/>
+				<Keyword text="byte-cn"/>
+				<Keyword text="byte-co"/>
+				<Keyword text="byte-cs"/>
+				<Keyword text="byte-na"/>
+				<Keyword text="byte-ns"/>
+				<Keyword text="Ca"/>
+				<Keyword text="Call"/>
+				<Keyword text="Case"/>
+				<Keyword text="Catch"/>
+				<Keyword text="Change"/>
+				<Keyword text="Check"/>
+				<Keyword text="Cleanup"/>
+				<Keyword text="cn"/>
+				<Keyword text="co"/>
+				<Keyword text="Continue"/>
+				<Keyword text="cp"/>
+				<Keyword text="cs"/>
+				<Keyword text="Define"/>
+				<Keyword text="Do"/>
+				<Keyword text="Each"/>
+				<Keyword text="Else"/>
+				<Keyword text="Elseif"/>
+				<Keyword text="End"/>
+				<Keyword text="Endat"/>
+				<Keyword text="Endcase"/>
+				<Keyword text="Enddo"/>
+				<Keyword text="Endexec"/>
+				<Keyword text="Endfor"/>
+				<Keyword text="Endform"/>
+				<Keyword text="Endfunction"/>
+				<Keyword text="Endif"/>
+				<Keyword text="Endloop"/>
+				<Keyword text="Endmethod"/>
+				<Keyword text="Endmodule"/>
+				<Keyword text="End-of-definition"/>
+				<Keyword text="Endon"/>
+				<Keyword text="Endprovide"/>
+				<Keyword text="Endselect"/>
+				<Keyword text="Endtry"/>
+				<Keyword text="Endwhile"/>
+				<Keyword text="eq"/>
+				<Keyword text="Exec"/>
+				<Keyword text="Exit"/>
+				<Keyword text="first"/>
+				<Keyword text="Form"/>
+				<Keyword text="Function"/>
+				<Keyword text="ge"/>
+				<Keyword text="gt"/>
+				<Keyword text="If"/>
+				<Keyword text="in"/>
+				<Keyword text="initial"/>
+				<Keyword text="is"/>
+				<Keyword text="last"/>
+				<Keyword text="le"/>
+				<Keyword text="Leave"/>
+				<Keyword text="Loop"/>
+				<Keyword text="lt"/>
+				<Keyword text="M"/>
+				<Keyword text="Method"/>
+				<Keyword text="Module"/>
+				<Keyword text="na"/>
+				<Keyword text="ne"/>
+				<Keyword text="new"/>
+				<Keyword text="not"/>
+				<Keyword text="np"/>
+				<Keyword text="ns"/>
+				<Keyword text="o"/>
+				<Keyword text="of"/>
+				<Keyword text="On"/>
+				<Keyword text="or"/>
+				<Keyword text="Perform"/>
+				<Keyword text="Provide"/>
+				<Keyword text="requested"/>
+				<Keyword text="Return"/>
+				<Keyword text="screen"/>
+				<Keyword text="Select"/>
+				<Keyword text="Sql"/>
+				<Keyword text="Stop"/>
+				<Keyword text="supplied"/>
+				<Keyword text="transaction"/>
+				<Keyword text="Try"/>
+				<Keyword text="When"/>
+				<Keyword text="While"/>
+				<Keyword text="z"/>
+				<Keyword text="Abs"/>
+				<Keyword text="Abs"/>
+				<Keyword text="Abs"/>
+				<Keyword text="Acos"/>
+				<Keyword text="Add"/>
+				<Keyword text="Add-corresponding"/>
+				<Keyword text="Adjacent"/>
+				<Keyword text="Aliases"/>
+				<Keyword text="all"/>
+				<Keyword text="Analyzer"/>
+				<Keyword text="Any"/>
+				<Keyword text="Append"/>
+				<Keyword text="appending"/>
+				<Keyword text="as"/>
+				<Keyword text="ascending"/>
+				<Keyword text="Asin"/>
+				<Keyword text="Assign"/>
+				<Keyword text="assigning"/>
+				<Keyword text="Assert"/>
+				<Keyword text="Atan"/>
+				<Keyword text="Authority-check"/>
+				<Keyword text="Avg"/>
+				<Keyword text="Back"/>
+				<Keyword text="BAdi"/>
+				<Keyword text="binary"/>
+				<Keyword text="Bit"/>
+				<Keyword text="Bit-and"/>
+				<Keyword text="Bit-not"/>
+				<Keyword text="Bit-or"/>
+				<Keyword text="Bit-xor"/>
+				<Keyword text="Blank"/>
+				<Keyword text="Bound"/>
+				<Keyword text="Break-point"/>
+				<Keyword text="buffer"/>
+				<Keyword text="by"/>
+				<Keyword text="c"/>
+				<Keyword text="case"/>
+				<Keyword text="Ceil"/>
+				<Keyword text="Centered"/>
+				<Keyword text="changing"/>
+				<Keyword text="Charlen"/>
+				<Keyword text="Checkbox"/>
+				<Keyword text="Clear"/>
+				<Keyword text="client"/>
+				<Keyword text="Close"/>
+				<Keyword text="Cnt"/>
+				<Keyword text="Code"/>
+				<Keyword text="Collect"/>
+				<Keyword text="color"/>
+				<Keyword text="col_negative"/>
+				<Keyword text="col_normal"/>
+				<Keyword text="Comment"/>
+				<Keyword text="Commit"/>
+				<Keyword text="Communication"/>
+				<Keyword text="comparing"/>
+				<Keyword text="component"/>
+				<Keyword text="Compute"/>
+				<Keyword text="Concatenate"/>
+				<Keyword text="Condense"/>
+				<Keyword text="Control"/>
+				<Keyword text="Controls"/>
+				<Keyword text="Convert"/>
+				<Keyword text="Copy"/>
+				<Keyword text="Cos"/>
+				<Keyword text="Cosh"/>
+				<Keyword text="Count"/>
+				<Keyword text="Country"/>
+				<Keyword text="Create"/>
+				<Keyword text="Currency"/>
+				<Keyword text="Cursor"/>
+				<Keyword text="Customer-function"/>
+				<Keyword text="Database"/>
+				<Keyword text="Dataset"/>
+				<Keyword text="date"/>
+				<Keyword text="Dbmaxlen"/>
+				<Keyword text="Decimals"/>
+				<Keyword text="default"/>
+				<Keyword text="Delete"/>
+				<Keyword text="Demand"/>
+				<Keyword text="descending"/>
+				<Keyword text="Describe"/>
+				<Keyword text="Detail"/>
+				<Keyword text="Dialog"/>
+				<Keyword text="Distinct"/>
+				<Keyword text="Div"/>
+				<Keyword text="Divide"/>
+				<Keyword text="Divide-corresponding"/>
+				<Keyword text="duplicates"/>
+				<Keyword text="Dynpro"/>
+				<Keyword text="Edit"/>
+				<Keyword text="Editor-call"/>
+				<Keyword text="encoding"/>
+				<Keyword text="equal"/>
+				<Keyword text="Event"/>
+				<Keyword text="Exceptions"/>
+				<Keyword text="excluding"/>
+				<Keyword text="Exp"/>
+				<Keyword text="Exponent"/>
+				<Keyword text="Export"/>
+				<Keyword text="exporting"/>
+				<Keyword text="Extended"/>
+				<Keyword text="Extract"/>
+				<Keyword text="Fetch"/>
+				<Keyword text="Field"/>
+				<Keyword text="Fields"/>
+				<Keyword text="Find"/>
+				<Keyword text="Floor"/>
+				<Keyword text="for"/>
+				<Keyword text="Format"/>
+				<Keyword text="Frac"/>
+				<Keyword text="frame"/>
+				<Keyword text="Free"/>
+				<Keyword text="from"/>
+				<Keyword text="Generate"/>
+				<Keyword text="Get"/>
+				<Keyword text="greater"/>
+				<Keyword text="Group"/>
+				<Keyword text="handler"/>
+				<Keyword text="hashed"/>
+				<Keyword text="header"/>
+				<Keyword text="help-id"/>
+				<Keyword text="Help-request"/>
+				<Keyword text="Hide"/>
+				<Keyword text="Hotspot"/>
+				<Keyword text="i"/>
+				<Keyword text="Icon"/>
+				<Keyword text="id"/>
+				<Keyword text="Import"/>
+				<Keyword text="importing"/>
+				<Keyword text="index"/>
+				<Keyword text="Infotypes"/>
+				<Keyword text="Inheriting"/>
+				<Keyword text="Input"/>
+				<Keyword text="Insert"/>
+				<Keyword text="intensified"/>
+				<Keyword text="into"/>
+				<Keyword text="Inverse"/>
+				<Keyword text="Iterator"/>
+				<Keyword text="Join"/>
+				<Keyword text="key"/>
+				<Keyword text="Language"/>
+				<Keyword text="Leading"/>
+				<Keyword text="left"/>
+				<Keyword text="left-justified"/>
+				<Keyword text="less"/>
+				<Keyword text="Like"/>
+				<Keyword text="Line"/>
+				<Keyword text="Line-count"/>
+				<Keyword text="Lines"/>
+				<Keyword text="Line-size"/>
+				<Keyword text="List-processing"/>
+				<Keyword text="Load"/>
+				<Keyword text="lower"/>
+				<Keyword text="Locale"/>
+				<Keyword text="Log"/>
+				<Keyword text="Log10"/>
+				<Keyword text="Margin"/>
+				<Keyword text="Mask"/>
+				<Keyword text="Matchcode"/>
+				<Keyword text="Max"/>
+				<Keyword text="memory"/>
+				<Keyword text="Mesh"/>
+				<Keyword text="Message"/>
+				<Keyword text="Message-id"/>
+				<Keyword text="Min"/>
+				<Keyword text="Mod"/>
+				<Keyword text="mode"/>
+				<Keyword text="Modify"/>
+				<Keyword text="Move"/>
+				<Keyword text="Move-corresponding"/>
+				<Keyword text="Multiply"/>
+				<Keyword text="Multiply-corresponding"/>
+				<Keyword text="New-line"/>
+				<Keyword text="New-page"/>
+				<Keyword text="Next"/>
+				<Keyword text="no "/>
+				<Keyword text="nodes"/>
+				<Keyword text="No-gap"/>
+				<Keyword text="No-heading"/>
+				<Keyword text="Non-unique"/>
+				<Keyword text="No-scrolling"/>
+				<Keyword text="No-sign"/>
+				<Keyword text="No-title"/>
+				<Keyword text="No-zero"/>
+				<Keyword text="number"/>
+				<Keyword text="Numofchar"/>
+				<Keyword text="occurs"/>
+				<Keyword text="occurrences"/>
+				<Keyword text="Open"/>
+				<Keyword text="optional"/>
+				<Keyword text="order"/>
+				<Keyword text="others"/>
+				<Keyword text="Output"/>
+				<Keyword text="Overlay"/>
+				<Keyword text="Pack"/>
+				<Keyword text="Page"/>
+				<Keyword text="Parameter"/>
+				<Keyword text="Pf-status"/>
+				<Keyword text="places"/>
+				<Keyword text="position"/>
+				<Keyword text="Print"/>
+				<Keyword text="Print-control"/>
+				<Keyword text="Property"/>
+				<Keyword text="Put"/>
+				<Keyword text="Radiobutton"/>
+				<Keyword text="Raise"/>
+				<Keyword text="Raising"/>
+				<Keyword text="Read"/>
+				<Keyword text="Receive"/>
+				<Keyword text="redefinition"/>
+				<Keyword text="ref"/>
+				<Keyword text="reference"/>
+				<Keyword text="Refresh"/>
+				<Keyword text="Reject"/>
+				<Keyword text="Replace"/>
+				<Keyword text="Reserve"/>
+				<Keyword text="Reset"/>
+				<Keyword text="right-justified"/>
+				<Keyword text="Rollback"/>
+				<Keyword text="Round"/>
+				<Keyword text="rows"/>
+				<Keyword text="Rtti"/>
+				<Keyword text="Run"/>
+				<Keyword text="Scan"/>
+				<Keyword text="Scroll"/>
+				<Keyword text="Scroll-boundary"/>
+				<Keyword text="Search"/>
+				<Keyword text="Selection-table"/>
+				<Keyword text="Selector"/>
+				<Keyword text="separated"/>
+				<Keyword text="Set"/>
+				<Keyword text="shared"/>
+				<Keyword text="Shift"/>
+				<Keyword text="Sign"/>
+				<Keyword text="Sin"/>
+				<Keyword text="single"/>
+				<Keyword text="Sinh"/>
+				<Keyword text="Size"/>
+				<Keyword text="Skip"/>
+				<Keyword text="Sort"/>
+				<Keyword text="sorted"/>
+				<Keyword text="Specified"/>
+				<Keyword text="Split"/>
+				<Keyword text="Sqrt"/>
+				<Keyword text="Stamp"/>
+				<Keyword text="standard"/>
+				<Keyword text="starting"/>
+				<Keyword text="Strlen"/>
+				<Keyword text="Structure"/>
+				<Keyword text="Submit"/>
+				<Keyword text="Subtract"/>
+				<Keyword text="Subtract-corresponding"/>
+				<Keyword text="Sum"/>
+				<Keyword text="Summary"/>
+				<Keyword text="Supply"/>
+				<Keyword text="Suppress"/>
+				<Keyword text="Symbol"/>
+				<Keyword text="Syntax-check"/>
+				<Keyword text="Syntax-trace"/>
+				<Keyword text="System-call"/>
+				<Keyword text="System-exceptions"/>
+				<Keyword text="table"/>
+				<Keyword text="Tables"/>
+				<Keyword text="Tan"/>
+				<Keyword text="Tanh"/>
+				<Keyword text="task"/>
+				<Keyword text="Text"/>
+				<Keyword text="Textpool"/>
+				<Keyword text="Time"/>
+				<Keyword text="times"/>
+				<Keyword text="title"/>
+				<Keyword text="Titlebar"/>
+				<Keyword text="to"/>
+				<Keyword text="Transfer"/>
+				<Keyword text="Translate"/>
+				<Keyword text="transporting"/>
+				<Keyword text="Trunc"/>
+				<Keyword text="type"/>
+				<Keyword text="Uline"/>
+				<Keyword text="under"/>
+				<Keyword text="unique"/>
+				<Keyword text="Unit"/>
+				<Keyword text="Unpack"/>
+				<Keyword text="up"/>
+				<Keyword text="Update"/>
+				<Keyword text="upper"/>
+				<Keyword text="using"/>
+				<Keyword text="value"/>
+				<Keyword text="Value-request"/>
+				<Keyword text="Wait"/>
+				<Keyword text="Where"/>
+				<Keyword text="Window"/>
+				<Keyword text="with"/>
+				<Keyword text="With-title"/>
+				<Keyword text="Work"/>
+				<Keyword text="Write"/>
+				<Keyword text="x"/>
+				<Keyword text="xor"/>
+				<Keyword text="Xstrlen"/>
+				<Keyword text="zone"/>
+			</Keywords>
+		</TextType>
+		<TextType id="32" name="Numbers" dstyle="0" dbkclr="0" bold="0" italic="0" underline="0" clr="5104381" bkclr="-1"/>
+		<TextType id="55" name="Operators" ImageIdx="12" bold="0" italic="0" underline="0" clr="10025880" bkclr="-1">
+			<Separators>
+				<Separator text="."/>
+				<Separator text=":"/>
+				<Separator text=","/>
+				<Separator text="("/>
+				<Separator text=")"/>
+			</Separators>
+			<Keywords>
+				<Keyword text="="/>
+				<Keyword text="=?"/>
+			</Keywords>
+		</TextType>
+		<TextType id="33" name="Strings" dstyle="0" dbkclr="0" text="1" bold="0" italic="0" underline="0" clr="10025880" bkclr="4802853">
+			<FirstChar/>
+			<Conditions>
+				<Condition start="'" end="'"/>
+				<Condition start="`" end="`"/>
+			</Conditions>
+		</TextType>
+		<TextType id="40" name="Syntactical error" dstyle="1" dbkclr="0" clr="255" bkclr="-1"/>
+		<TextType id="70" name="Token operator" bold="0" italic="0" underline="0" clr="12632256" bkclr="-1">
+			<Separators>
+				<Separator text="-"/>
+				<Separator text="-&gt;"/>
+				<Separator text="=&gt;"/>
+				<Separator text="~"/>
+			</Separators>
+		</TextType>
+		<TextType id="20" name="User region" dstyle="0" dbkclr="0" text="0" bold="0" italic="1" underline="0" clr="12614523" bkclr="-1">
+			<Conditions>
+				<Condition start="&quot;$." end="\n"/>
+			</Conditions>
+		</TextType>
+	</COLORSYNTAX>
+</XMLConfigSettings>
