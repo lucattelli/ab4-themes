@@ -4,11 +4,13 @@
 DATA: l_matnr      TYPE matnr,
       l_number     TYPE i,
       lt_materials TYPE TABLE OF mara.
-CONSTANTS: l_file TYPE string VALUE 'file_name_0oO.txt'. "comment
+CONSTANTS: l_file TYPE string VALUE `file_name_0oO1l.txt`. "comment
 
 START-OF-SELECTION.
 
-  l_number = ( 3 + 7 ) * 100.
+  DO 10 TIMES.
+    l_number = ( 3 + 7 ) * 100.
+  ENDDO.
 
   CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'
     EXPORTING
