@@ -3,7 +3,7 @@
 
 [![example](example.png)](example.png)
 
-Dark theme for ABAP editor (SAP GUI)
+This is Dark theme for ABAP editor (SAP GUI), based on the [Dracula](https://draculatheme.com/) color scheme.
 - abap_spec.xml exported from SAP Logon 740
 - font used: Fira Code, size 12
 
