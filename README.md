@@ -40,6 +40,7 @@ Here's a list of themes currently available.
 * [Nostalgia Theme](themes/nostalgia/theme-info.md) - for [“grumpy ABAPosaurus”](https://blogs.sap.com/2017/08/01/old-new-abap-editor/?replytocom=385416#respond)
 * [tb-dark](themes/tb-dark/)
 * [vscode-dark+](themes/vscode-dark+/theme-info.md)
+* [dracula](themes/dracula/)
 * *Insert your own theme link here...*
 
 # Contribute with your own theme
