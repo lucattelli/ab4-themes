@@ -42,6 +42,7 @@ Here's a list of themes currently available.
 * [vscode-dark+](themes/vscode-dark+/theme-info.md)
 * [dracula](themes/dracula/)
 * [SAP original theme SAP GUI 7.60](themes/original-760/) - for those who want to go back to the standard theme
+* [Nord](themes/nord/)
 * *Insert your own theme link here...*
 
 # Contribute with your own theme
