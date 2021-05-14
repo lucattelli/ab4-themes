@@ -36,17 +36,14 @@ Now you can click **Save** and start coding! :)
 
 Here's a list of themes currently available.
 
-| [Bruno's ABAP Dark Theme](themes/brl-dark-editor/theme-info.md) | [Nostalgia Theme](themes/nostalgia/theme-info.md) - for [“grumpy ABAPosaurus”](https://blogs.sap.com/2017/08/01/old-new-abap-editor/?replytocom=385416#respond) | [tb-dark](themes/tb-dark/) |
+| 1 | 2 | 3 |
 |------------|------------|--------------|
-|[![Bruno's ABAP Dark Theme](themes/brl-dark-editor/detail_print.png)](themes/brl-dark-editor) |![Nostalgia Theme](themes/nostalgia/example.png)](themes/nostalgia) |![tb-dark](themes/tb-dark/example.png)](themes/tb-dark) |
-
-| [vscode-dark+](themes/vscode-dark+/theme-info.md) | [dracula](themes/dracula/) | [SAP original theme SAP GUI 7.60](themes/original-760/) - for those who want to go back to the standard theme |
-|------------|------------|--------------|
-|[![vscode-dark+](themes/vscode-dark%2B/screenshot.png)](themes/vscode-dark%2B) |![dracula](themes/dracula/example.png)](themes/dracula) |![SAP original theme SAP GUI 7.60](themes/original-760/example.png)](themes/original-760) |
-
+| [Bruno's ABAP Dark Theme](themes/brl-dark-editor) | [Nostalgia Theme](themes/nostalgia) - for [“grumpy ABAPosaurus”](https://blogs.sap.com/2017/08/01/old-new-abap-editor/?replytocom=385416#respond) | [tb-dark](themes/tb-dark/) |
+|[![Bruno's ABAP Dark Theme](themes/brl-dark-editor/detail_print.png)](themes/brl-dark-editor) |[![Nostalgia Theme](themes/nostalgia/example.png)](themes/nostalgia) |[![tb-dark](themes/tb-dark/example.png)](themes/tb-dark) |
+| [vscode-dark+](themes/vscode-dark+) | [dracula](themes/dracula/) | [SAP original theme SAP GUI 7.60](themes/original-760/) |
+|[![vscode-dark+](themes/vscode-dark%2B/screenshot.png)](themes/vscode-dark%2B) |[![dracula](themes/dracula/example.png)](themes/dracula) |[![SAP original theme SAP GUI 7.60](themes/original-760/example.png)](themes/original-760) |
 | [Nord](themes/nord/) | *Insert your own theme link here...* | |
-|------------|------------|--------------|
-|[![Nord](themes/nord/example.png)]() | *Insert a screenshot ~ 600 wide x 500 high* | |
+|[![Nord](themes/nord/example.png)](themes/nord) | *Insert a screenshot ~600 wide x ~500 high* | |
 
 # Contribute with your own theme
 
