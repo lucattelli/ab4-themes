@@ -42,8 +42,10 @@ Here's a list of themes currently available.
 |[![Bruno's ABAP Dark Theme](themes/brl-dark-editor/detail_print.png)](themes/brl-dark-editor) |[![Nostalgia Theme](themes/nostalgia/example.png)](themes/nostalgia) |[![tb-dark](themes/tb-dark/example.png)](themes/tb-dark) |
 | [vscode-dark+](themes/vscode-dark+) | [dracula](themes/dracula/) | [SAP original theme SAP GUI 7.60](themes/original-760/) |
 |[![vscode-dark+](themes/vscode-dark%2B/screenshot.png)](themes/vscode-dark%2B) |[![dracula](themes/dracula/example.png)](themes/dracula) |[![SAP original theme SAP GUI 7.60](themes/original-760/example.png)](themes/original-760) |
-| [Nord](themes/nord/) |[OneDark](themes/OneDark)| *Insert your own theme link here...* |
-|[![Nord](themes/nord/example.png)](themes/nord) |[![OneDark](https://user-images.githubusercontent.com/71790678/162677566-a2c60310-529d-4d58-85fb-905fe2225b69.png)](themes/OneDark)| *Insert a screenshot ~600 wide x ~500 high* |
+| [Nord](themes/nord/) |[OneDark](themes/OneDark)| [Citrus Grove Theme](themes/CitrusGrove_Theme/) |
+|[![Nord](themes/nord/example.png)](themes/nord) |[![OneDark](https://user-images.githubusercontent.com/71790678/162677566-a2c60310-529d-4d58-85fb-905fe2225b69.png)](themes/OneDark)|[![Citrus Grove Theme](themes/CitrusGrove_Theme/CitrusGrove_Editor.png)](themes/CitrusGrove_Theme/)
+| *Insert your own theme link here...* |
+| *Insert a screenshot ~600 wide x ~500 high* |
 
 # Contribute with your own theme
 
